@@ -1,0 +1,48 @@
+:root {
+  /*COLOR*/
+  --black-color-100: #0A0A0A;
+  --white-color-100: #fdfdfd;
+  --white-color-75: #fdfdfdb2;
+  --red-color-100: #F3353E;
+  --red-color-hover: #e74d55;
+  /*FONTS*/
+  --fonts: font-family: 'Lato', sans-serif;
+}
+
+.ft-400 {
+  font-family: var(--fonts);
+  font-weight: 400;
+}
+
+.ft-700 {
+  font-family: var(--fonts);
+  font-weight: 700;
+}
+
+.ft-900 {
+  font-family: var(--fonts);
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-cln {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-c1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-c2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
