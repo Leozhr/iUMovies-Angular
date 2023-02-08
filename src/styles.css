@@ -1,8 +1,10 @@
 @import "assets/theme/variable.css";
 
 body, html {
-  background-color: var(--black-color-100);
   color: var(--white-color-100);
+  font-family: var(--fonts);
+  font-weight: 400;
+  background-color: black;
 }
 
 * {
@@ -25,7 +27,8 @@ button {
 }
 
 .container {
-  max-width: 90%;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 /*MOBILE*/
