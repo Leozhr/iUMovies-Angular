@@ -1,8 +1,10 @@
 :root {
   /*COLOR*/
   --black-color-100: #0A0A0A;
+  --black-color-full: #020202;
   --white-color-100: #fdfdfd;
   --white-color-75: #fdfdfdb2;
+  --white-color-50: #fdfdfd7c;
   --red-color-100: #F3353E;
   --red-color-hover: #d32b34;
   /*FONTS*/
@@ -11,6 +13,10 @@
 
 .bg {
   background-color: var(--black-color-100);
+}
+
+.bg-full {
+  background-color: var(--black-color-full);
 }
 
 .lato-bold {
@@ -24,7 +30,11 @@
 }
 
 .text-large {
-  font-size: 3rem;
+  font-size: 3.5rem;
+}
+
+.text-high {
+  font-size: 2.5rem;
 }
 
 .text-medium {

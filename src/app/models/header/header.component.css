@@ -6,6 +6,13 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
 }
 
+.visible {
+  background: linear-gradient(to top, transparent, black);
+  box-shadow: none;
+  padding: 20px 0px 40px 0px;
+  transition: .2s;
+}
+
 .header .container {
   justify-content: space-between;
   padding: 20px 0px 20px 0px;

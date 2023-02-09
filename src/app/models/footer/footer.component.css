@@ -1,0 +1,42 @@
+footer {
+  margin-top: 120px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.footer {
+  padding: 40px 0px;
+  align-items: center;
+}
+
+.footer img {
+  width: max-content;
+}
+
+.name-info {
+  gap: 10px;
+}
+
+.name-info h3{
+  color: var(--white-color-75);
+}
+
+.name-info p, .links-info a {
+  color: var(--white-color-50);
+}
+
+.name-info span {
+  color: var(--red-color-100);
+}
+
+.links-info ul{
+  gap: 20px;
+  text-transform: uppercase;
+  justify-content: flex-end;
+}
+
+.links-info ul a:hover {
+  color: var(--white-color-100);
+}
+
+

@@ -1,7 +1,8 @@
 <main class="home">
-  <swiper [slidesPerView]="1" [spaceBetween]="0" [loop]="true">
-    <ng-template swiperSlide class="banner" *ngFor="let movie of movies">
-      <img src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path}}" alt="">
+  <swiper [slidesPerView]="1" [spaceBetween]="0">
+    <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 3)">
+      <img src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path}}" alt="" loading="lazy" width="1080"
+        height="1920">
       <div class="banner-info flex-cln">
         <span class="text-medium">{{ movie.release_date | date }}</span>
         <h1 class="lato-bold text-large">{{ movie.title }}</h1>
@@ -13,14 +14,39 @@
   </swiper>
 </main>
 
-<section class="popular">
-  <h1>Popular Movies</h1>
-</section>
+<div class="home-posters">
 
-<section class="top_rated">
-  <h1>Top Movies</h1>
-</section>
+  <div class="container flex-cln post">
+    <h1>UPCOMING MOVIES</h1>
+    <div>
+      <swiper [slidesPerView]="6" [spaceBetween]="0">
+        <ng-template swiperSlide class="banner" *ngFor="let movie of upcoming?.slice(0, 12)">
+          <img src="https://image.tmdb.org/t/p/w400{{ movie.poster_path }}" alt="" class="poster" loading="lazy">
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
 
-<section class="upcoming">
-  <h1>Upcoming Movies</h1>
-</section>
+  <div class="container flex-cln post">
+    <h1>POPULAR MOVIES</h1>
+    <div>
+      <swiper [slidesPerView]="6" [spaceBetween]="0">
+        <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 12)">
+          <img src="https://image.tmdb.org/t/p/w400{{ movie.poster_path }}" alt="" class="poster" loading="lazy">
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+
+  <div class="container flex-cln post">
+    <h1>TOP RATED MOVIES</h1>
+    <div>
+      <swiper [slidesPerView]="6" [spaceBetween]="0">
+        <ng-template swiperSlide class="banner" *ngFor="let movie of top?.slice(0, 12)">
+          <img src="https://image.tmdb.org/t/p/w400{{ movie.poster_path }}" alt="" class="poster" loading="lazy">
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+
+</div>

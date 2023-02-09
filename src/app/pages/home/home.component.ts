@@ -11,15 +11,40 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
-  movies: Result[];
+  popular: Result[];
+  top: Result[];
+  upcoming: Result[];
 
   constructor(private api: MoviesService) {}
 
   ngOnInit(): void {
+    this.Popular();
+    this.Top();
+    this.UpComing();
+  }
+
+  Popular() {
+    this.api.popular().subscribe({
+      next: (result) => {
+        this.popular = result.results;
+      },
+      error: () => {},
+    });
+  }
+
+  Top() {
     this.api.top().subscribe({
       next: (result) => {
-        this.movies = result.results;
-        console.log(this.movies);
+        this.top = result.results;
+      },
+      error: () => {},
+    });
+  }
+
+  UpComing() {
+    this.api.upcoming().subscribe({
+      next: (result) => {
+        this.upcoming = result.results;
       },
       error: () => {},
     });

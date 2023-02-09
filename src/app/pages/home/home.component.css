@@ -10,6 +10,10 @@
   filter: brightness(60%);
 }
 
+.home .banner img:active {
+  cursor: grabbing;
+}
+
 .home .banner-info {
   cursor: grab;
   position: absolute;
@@ -19,6 +23,15 @@
   max-width: 100ch;
   text-shadow: 2px 2px 3px black;
   gap: 10px;
+}
+
+.home-posters h1::after {
+  content: "";
+  width: 120px;
+  height: 5px;
+  background-color: var(--red-color-hover);
+  display: block;
+  margin: 5px 0px 10px 0px;
 }
 
 .home .banner-info button {
@@ -35,4 +48,14 @@
 .swiper-wrapper{
   display:inline-flex;
 }
+
+.home-posters {
+  padding: 50px 0px;
+}
+
+.post {
+  margin-top: 100px;
+  gap: 20px;
+}
+
 

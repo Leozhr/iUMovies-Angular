@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 //TEMPLATES
-import { FooterComponent } from './template/footer/footer.component';
-import { HeaderComponent } from './template/header/header.component';
+import { FooterComponent } from './models/footer/footer.component';
+import { HeaderComponent } from './models/header/header.component';
 //PAGES
 import { PagesModule } from './pages/pages.module';
 //SERVICES
@@ -16,5 +16,6 @@ import { MoviesService } from './services/movies.service';
   providers: [MoviesService],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, PagesModule, HttpClientModule],
+  exports: [],
 })
 export class AppModule {}
