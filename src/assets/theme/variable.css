@@ -1,6 +1,7 @@
 :root {
   /*COLOR*/
   --black-color-100: #0A0A0A;
+  --gray-color-100: #181818;
   --black-color-full: #020202;
   --white-color-100: #fdfdfd;
   --white-color-75: #fdfdfdb2;
@@ -128,5 +129,9 @@
 @media screen and (max-width: 600px){
   .text-high {
     font-size: 1.25rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 }

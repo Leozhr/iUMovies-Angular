@@ -1,0 +1,13 @@
+.credits {
+  overflow-x: hidden;
+  margin-top: 2%;
+}
+
+.credits .swiper-wrapper{
+  display:inline-flex;
+  margin-top: 20px;
+}
+
+.credits .drops {
+  margin-top: 8%;
+}

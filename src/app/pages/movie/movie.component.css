@@ -1,65 +1,83 @@
-.main .movie-wall picture img{
+.movie picture img{
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   object-fit: cover;
-  filter: brightness(25%);
+  filter: brightness(40%);
+}
+
+.movie-info {
   position: absolute;
+  left: 10%;
+  top: 300px;
 }
 
-.main .movie-info {
-  justify-items: center;
-  grid-template-columns: 1fr 2fr;
-}
-
-.main .movie-info img {
-  margin-top: 300px;
-  position: relative;
-  width: 350px;
-  border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.main .movie-info .info {
-  position: relative;
-  margin-top: 420px;
-  text-shadow: 1px 1px 3px black;
-}
-
-.main .movie-info .cards{
+.movie .cards {
   gap: 10px;
 }
 
-.main .movie-info .cards span{
-  text-transform: uppercase;
+.movie .cards span {
   padding: 10px 15px;
-  background-color: var(--red-color-hover);
-  border-radius: 12px;
-  width: max-content;
-  display: block;
-  margin: 15px 0px 40px;
-  text-shadow: none;
+  background-color: var(--red-color-100);
+  border-radius: 5px;
+  margin-top: 3%;
 }
 
-.main .movie-info p {
-  max-width: 700px;
-  line-height: 1.4em;
-  margin-bottom: 25px;
-  background-color: #0f0f0f;
-  padding: 8px;
-  border-radius: 8px;
+.movie .movie-info p {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: var(--black-color-100);
+  max-width: 600px;
+  margin-top: 2%;
 }
 
-.main round-progress {
-  max-width: 60px;
+.average {
+  height: 100px;
+  margin-bottom: 10%;
 }
 
-.main .average {
-  position: relative;
-}
-
-.note {
+.average span{
   position: absolute;
-  top: 17px;
-  left: 16px;
+  top: 26px;
+  left: 26px;
+  font-size: 2.25rem;
 }
+
+round-progress {
+  max-width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .movie picture img{
+    height: 40vh;
+    filter: brightness(70%);
+  }
+
+  .movie .movie-info {
+    position: initial;
+    padding: 20px 0px 40px;
+  }
+
+  .movie .movie-info p {
+    max-width: 100%;
+  }
+
+  .movie .average {
+    position: absolute;
+    top: 100px;
+  }
+
+  .average span{
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 3px black;
+  }
+
+  round-progress {
+    max-width: 70px;
+  }
+}
+
+
 

@@ -10,12 +10,20 @@ import { HeaderComponent } from './models/header/header.component';
 import { PagesModule } from './pages/pages.module';
 //SERVICES
 import { MoviesService } from './services/movies.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Import library module
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   providers: [MoviesService],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PagesModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   exports: [],
 })
 export class AppModule {}

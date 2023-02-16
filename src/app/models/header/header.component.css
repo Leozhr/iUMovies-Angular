@@ -46,10 +46,10 @@
 
 @media screen and (max-width: 600px){
   .header {
-    position: static;
+    position: initial;
   }
 
-  .visible {
+  .header {
     background: var(--black-color-100);
     padding: 10px 0px 10px 0px;
   }

@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
     <router-outlet></router-outlet>
     <app-footer></app-footer>`,
 })
-export class AppComponent {
-  title = 'iUMovies';
-}
+export class AppComponent {}

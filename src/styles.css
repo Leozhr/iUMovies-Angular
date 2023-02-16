@@ -32,6 +32,10 @@ button {
   max-width: 80%;
 }
 
+.swiper-wrapper {
+  display: inline-flex;
+}
+
 /*MOBILE*/
 @media screen and (max-width: 560px) {
   .container {

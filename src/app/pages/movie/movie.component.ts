@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { average } from 'src/app/global/functions/average';
 import { Film } from 'src/app/interfaces/poster';
@@ -8,6 +8,7 @@ import { MoviesService } from 'src/app/services/movies.service';
   selector: 'app-movie',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class MovieComponent implements OnInit {
   userId: number;
@@ -28,7 +29,6 @@ export class MovieComponent implements OnInit {
       next: (result) => {
         this.movie = result;
         this.getColor();
-        console.log(this.movie);
       },
       error: () => {},
     });
