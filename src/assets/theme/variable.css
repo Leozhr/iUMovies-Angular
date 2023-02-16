@@ -19,6 +19,10 @@
   background-color: var(--black-color-full);
 }
 
+.bg-black {
+  background-color: black;
+}
+
 .lato-bold {
   font-family: var(--fonts);
   font-weight: 700;
@@ -79,7 +83,6 @@
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1.15rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -90,4 +93,40 @@
 }
 ::-webkit-scrollbar-thumb {
   background: var(--red-color-100);
+}
+
+@media screen and (max-width: 1440px){
+  .text-small {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1125px){
+  .text-large {
+    font-size: 3rem;
+  }
+
+  .text-medium {
+    font-size: 1.5rem;
+  }
+
+  .text-minimal {
+    font-size: 1rem;
+  }
+
+  .text-high {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .text-large {
+    font-size: 2.15rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .text-high {
+    font-size: 1.25rem;
+  }
 }

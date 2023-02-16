@@ -1,0 +1,65 @@
+.main .movie-wall picture img{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  filter: brightness(25%);
+  position: absolute;
+}
+
+.main .movie-info {
+  justify-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+.main .movie-info img {
+  margin-top: 300px;
+  position: relative;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main .movie-info .info {
+  position: relative;
+  margin-top: 420px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.main .movie-info .cards{
+  gap: 10px;
+}
+
+.main .movie-info .cards span{
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background-color: var(--red-color-hover);
+  border-radius: 12px;
+  width: max-content;
+  display: block;
+  margin: 15px 0px 40px;
+  text-shadow: none;
+}
+
+.main .movie-info p {
+  max-width: 700px;
+  line-height: 1.4em;
+  margin-bottom: 25px;
+  background-color: #0f0f0f;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.main round-progress {
+  max-width: 60px;
+}
+
+.main .average {
+  position: relative;
+}
+
+.note {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+}
+

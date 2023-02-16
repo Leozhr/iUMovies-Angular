@@ -43,3 +43,26 @@
 .header a:hover {
   color: var(--white-color-100);
 }
+
+@media screen and (max-width: 600px){
+  .header {
+    position: static;
+  }
+
+  .visible {
+    background: var(--black-color-100);
+    padding: 10px 0px 10px 0px;
+  }
+
+  .header .container {
+    padding: 10px 0px 10px 0px;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  .header nav, .header button{
+    display: none;
+  }
+}

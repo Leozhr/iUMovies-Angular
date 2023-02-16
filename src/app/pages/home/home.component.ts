@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Result } from 'src/app/interfaces/movies';
 import { MoviesService } from 'src/app/services/movies.service';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
+SwiperCore.use([Navigation, Pagination]);
 
 @Component({
   selector: 'app-home',
@@ -14,6 +14,15 @@ export class HomeComponent implements OnInit {
   popular: Result[];
   top: Result[];
   upcoming: Result[];
+
+  config: SwiperOptions = {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    breakpoints: {
+      1500: { slidesPerView: 5 },
+      900: { slidesPerView: 4 },
+    },
+  };
 
   constructor(private api: MoviesService) {}
 

@@ -1,8 +1,14 @@
 .poster {
-  max-width: 250px;
+  max-width: 100%;
   cursor: pointer;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .poster {
+    border-radius: 8px;
+  }
 }

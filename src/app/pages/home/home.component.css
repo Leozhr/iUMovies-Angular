@@ -5,7 +5,7 @@
 .home .banner img {
   width: 100%;
   height: 100vh;
-  cursor: grab;
+  cursor: pointer;
   object-fit: cover;
   filter: brightness(60%);
 }
@@ -14,8 +14,12 @@
   cursor: grabbing;
 }
 
+ * {
+  max-width: 100%;
+}
+
 .home .banner-info {
-  cursor: grab;
+  cursor: pointer;
   position: absolute;
   z-index: 0;
   top: 60%;
@@ -45,17 +49,75 @@
   background-color: var(--red-color-hover);
 }
 
-.swiper-wrapper{
-  display:inline-flex;
-}
-
-.home-posters {
-  padding: 50px 0px;
-}
-
-.post {
+.home-posters .post {
   margin-top: 100px;
   gap: 20px;
+  position: relative;
 }
+
+.home-posters img{
+  opacity: 1;
+  position: relative;
+  border: 1px solid var(--black-color-100);
+}
+
+.home-posters img:hover{
+  opacity: 0.7;
+  border: 1px solid var(--white-color-50);
+  transition: .2s;
+}
+
+@media screen and (max-width: 1000px){
+  .home .banner img {
+    height: 70vh;
+  }
+
+  .home .banner-info {
+    top: 55%;
+  }
+
+  .home .banner-info p {
+    max-width: 90%;
+  }
+
+  .home .banner-info button {
+    display: none;
+  }
+
+}
+
+/*MOBILE VERSION*/
+
+@media screen and (max-width: 600px){
+
+  .home-posters h1 {
+    font-weight: 500;
+  }
+
+  .home .banner img {
+    height: 40vh;
+    filter: brightness(80%);
+  }
+
+  .home .banner-info {
+    display: none;
+  }
+
+  .home-posters h1::after {
+    display: none;
+  }
+
+  .home-posters .post {
+    margin-top: 30px;
+    gap: 8px;
+  }
+
+  .home nav, .home button{
+    display: none;
+  }
+}
+
+
+
 
 

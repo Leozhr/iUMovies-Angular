@@ -1,0 +1,31 @@
+<main class="main">
+  <div class="movie-wall">
+    <picture>
+      <img src="https://image.tmdb.org/t/p/original{{ movie?.backdrop_path }}" alt="" loading="eager">
+    </picture>
+
+    <div class="movie-info grid-c2 container">
+      <img src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}" alt="" loading="lazy">
+
+      <div class="info">
+        <h1 class="text-large lato-black">{{ movie?.title }}</h1>
+        <div class="flex cards">
+          <span class="text-small" *ngFor="let item of movie?.genres">{{ item.name }}</span>
+        </div>
+        <p class="text-minimal">{{movie?.overview}}</p>
+
+        <div class="average">
+          <round-progress [current]="movie?.vote_average" [max]="10" [color]="color" [background]="'#2b2b2b'"
+            [radius]="125" [stroke]="20" [semicircle]="false" [rounded]="true" [clockwise]="true" [responsive]="false"
+            [duration]="800" [animation]="'easeInOutQuart'" [animationDelay]="500"></round-progress>
+          <span class="text-small note lato-bold">{{ movie?.vote_average | average }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<section class="container">
+  <app-actors></app-actors>
+</section>

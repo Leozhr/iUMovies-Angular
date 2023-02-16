@@ -27,4 +27,10 @@ export class MoviesService {
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.API_PATH}`
     );
   }
+
+  movieID(ID: number): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/${ID}?api_key=${this.API_PATH}`
+    );
+  }
 }
