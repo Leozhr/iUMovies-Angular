@@ -3,10 +3,10 @@
     <img src="assets/img/icons/logo.svg" alt="logo">
     <nav>
       <ul class="flex text-small">
-        <li><a href="">home</a></li>
-        <li><a routerLink="/home/popular">popular</a></li>
-        <li><a href="">top rated</a></li>
-        <li><a href="">upcoming</a></li>
+        <li><a [routerLink]="['/home']">home</a></li>
+        <li><a [routerLink]="['/home/popular']">popular</a></li>
+        <li><a [routerLink]="['/home/top']">top rated</a></li>
+        <li><a [routerLink]="['/home/upcoming']">upcoming</a></li>
       </ul>
     </nav>
     <div class="type flex">

@@ -15,6 +15,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/popular/popular.module').then((m) => m.PopularModule),
   },
+  {
+    path: 'home/top',
+    loadChildren: () =>
+      import('./pages/top/top.module').then((m) => m.TopModule),
+  },
 ];
 
 @NgModule({

@@ -8,7 +8,7 @@
 .movie-info {
   position: absolute;
   left: 10%;
-  top: 300px;
+  top: 250px;
 }
 
 .movie .cards {
@@ -26,7 +26,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   background: var(--black-color-100);
-  max-width: 600px;
+  max-width: 800px;
   margin-top: 2%;
 }
 
