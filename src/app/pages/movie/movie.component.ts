@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { average } from 'src/app/global/functions/average';
 import { Film } from 'src/app/interfaces/poster';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -16,12 +17,18 @@ export class MovieComponent implements OnInit {
   round = new average();
   color: string = 'black';
 
-  constructor(private url: ActivatedRoute, private api: MoviesService) {}
+  constructor(
+    private url: ActivatedRoute,
+    private api: MoviesService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
+    this.spinner.show();
     this.userId = this.url.snapshot.params['id'];
     this.getID();
     window.scroll({ top: 0 });
+    this.spinner.hide();
   }
 
   getID() {

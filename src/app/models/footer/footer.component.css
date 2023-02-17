@@ -22,7 +22,7 @@ footer {
 }
 
 .name-info p, .links-info a {
-  color: var(--white-color-50);
+  color: var(--white-color-75);
 }
 
 .name-info span {

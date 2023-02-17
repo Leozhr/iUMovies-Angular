@@ -4,6 +4,15 @@
   position: fixed;
   z-index: 2;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  transition: .4s;
+}
+
+.header img{
+  cursor: pointer;
+}
+
+.active {
+  color: var(--white-color-100);
 }
 
 .visible {
@@ -20,28 +29,8 @@
 }
 
 .header ul {
-  gap: 50px;
+  gap: 100px;
   text-shadow: 1px 1px 1px black;
-}
-
-.header .type {
-  gap: 10px;
-}
-
-.header button {
-  text-shadow: 1px 1px 3px black;
-}
-
-.header button + button {
-  background: var(--red-color-100);
-}
-
-.header button + button:hover {
-  background-color: var(--red-color-hover);
-}
-
-.header a:hover {
-  color: var(--white-color-100);
 }
 
 @media screen and (max-width: 600px){

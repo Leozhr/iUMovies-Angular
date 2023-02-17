@@ -1,18 +1,12 @@
 <header class="header bg" [ngClass]="{'visible': visibility < 50}">
   <div class="flex container logo">
-    <img src="assets/img/icons/logo.svg" alt="logo">
+    <img src="assets/img/icons/logo.svg" alt="logo" routerLink="home">
     <nav>
       <ul class="flex text-small">
-        <li><a [routerLink]="['/home']">home</a></li>
-        <li><a [routerLink]="['/home/popular']">popular</a></li>
-        <li><a [routerLink]="['/home/top']">top rated</a></li>
-        <li><a [routerLink]="['/home/upcoming']">upcoming</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']">popular</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']">top rated</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']">upcoming</a></li>
       </ul>
     </nav>
-    <div class="type flex">
-      <button class="btn text-small"><a href="">LOG IN</a></button>
-      <button class="btn text-small">SIGN UP</button>
-      <span></span>
-    </div>
   </div>
 </header>

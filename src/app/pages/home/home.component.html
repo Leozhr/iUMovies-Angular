@@ -7,7 +7,7 @@
         <h1 class="lato-bold text-large">{{ movie.title }}</h1>
         <p class="text-minimal">{{ movie.overview }}</p>
         <span class="text-minimal">{{ movie.vote_count }} Reviews</span>
-        <button class="btn">WATCH NOW</button>
+        <button class="btn text-small" [routerLink]="['/home/movie/', movie.id]">WATCH NOW</button>
       </div>
     </ng-template>
   </swiper>

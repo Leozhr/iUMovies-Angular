@@ -11,3 +11,7 @@
 .credits .drops {
   margin-top: 8%;
 }
+
+.actor img {
+  filter: brightness(80%);
+}
