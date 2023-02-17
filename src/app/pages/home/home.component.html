@@ -2,13 +2,12 @@
   <swiper [slidesPerView]="1" [spaceBetween]="0">
     <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 3)">
       <img src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path }}" alt="" loading="lazy" width="auto"
-        height="auto">
+        height="auto" [routerLink]="['/home/movie/', movie.id]">
       <div class="banner-info flex-cln">
         <span class="text-medium">{{ movie.release_date | date }}</span>
         <h1 class="lato-bold text-large">{{ movie.title }}</h1>
         <p class="text-minimal">{{ movie.overview }}</p>
         <span class="text-minimal">{{ movie.vote_count }} Avaliações</span>
-        <button class="btn text-small" [routerLink]="['/home/movie/', movie.id]">Saiba Mais</button>
       </div>
     </ng-template>
   </swiper>
