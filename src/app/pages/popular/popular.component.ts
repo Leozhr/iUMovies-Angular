@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { resolution } from 'src/app/global/functions/resolution';
 import { Result } from 'src/app/interfaces/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -9,6 +10,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class PopularComponent implements OnInit {
   movies: Result[];
+  pixel = new resolution();
 
   constructor(private film: MoviesService) {}
 

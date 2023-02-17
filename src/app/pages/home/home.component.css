@@ -84,6 +84,11 @@
     display: none;
   }
 
+  .home-posters img:hover{
+    opacity: 1;
+    border: 1px solid var(--black-color-100);
+  }
+
 }
 
 /*MOBILE VERSION*/
@@ -95,7 +100,7 @@
   }
 
   .home .banner img {
-    height: 40vh;
+    height: 30vh;
     filter: brightness(80%);
   }
 

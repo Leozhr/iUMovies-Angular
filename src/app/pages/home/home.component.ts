@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { resolution } from 'src/app/global/functions/resolution';
 import { Result } from 'src/app/interfaces/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
@@ -14,6 +15,8 @@ export class HomeComponent implements OnInit {
   popular: Result[];
   top: Result[];
   upcoming: Result[];
+
+  pixel = new resolution();
 
   config: SwiperOptions = {
     slidesPerView: 3,

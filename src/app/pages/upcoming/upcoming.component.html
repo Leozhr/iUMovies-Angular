@@ -1,11 +1,11 @@
 <main class="main">
   <div class="upcoming-main container">
-    <h1 class="text-large">Top Rated</h1>
+    <h1 class="text-high">Filmes Lançamentos</h1>
 
     <div class="upcoming-movies grid">
 
       <div *ngFor="let movie of movies">
-        <img src="https://image.tmdb.org/t/p/w400{{ movie.poster_path }}" alt="" loading="lazy"
+        <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="" loading="lazy"
           [routerLink]="['/home/movie/', movie.id]" class="poster">
       </div>
 

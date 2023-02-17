@@ -12,25 +12,31 @@ export class MoviesService {
 
   popular(): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${this.API_PATH}`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${this.API_PATH}&language=pt-BR`
     );
   }
 
   top(): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.API_PATH}`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.API_PATH}&language=pt-BR`
     );
   }
 
   upcoming(): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.API_PATH}`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.API_PATH}&language=pt-BR`
     );
   }
 
   movieID(ID: number): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/${ID}?api_key=${this.API_PATH}`
+      `https://api.themoviedb.org/3/movie/${ID}?api_key=${this.API_PATH}&language=pt-BR`
+    );
+  }
+
+  MovieSearch(name: string): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${this.API_PATH}&language=pt-BR&query=${name}&page=1&include_adult=false`
     );
   }
 }

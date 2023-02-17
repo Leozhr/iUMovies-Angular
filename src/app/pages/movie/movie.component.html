@@ -15,7 +15,7 @@
     <div class="info">
       <h1 class="text-large lato-black">{{ movie?.title }}</h1>
       <div class="flex cards">
-        <span class="text-small" *ngFor="let item of movie?.genres?.slice(0, 3)">{{ item.name }}</span>
+        <span class="text-small" *ngFor="let item of movie?.genres?.slice(0, 3)">{{ item?.name }}</span>
       </div>
       <p class="text-minimal">{{movie?.overview}}</p>
     </div>

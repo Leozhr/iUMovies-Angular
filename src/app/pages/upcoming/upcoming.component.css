@@ -14,6 +14,11 @@
   transition: .2s;
 }
 
+@media screen and (max-width: 1000px) {
+  .upcoming-main {
+    padding-top: 30%;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .upcoming-main {
@@ -21,7 +26,12 @@
   }
 
   .upcoming-movies {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .upcoming-main img:hover{
+    opacity: 1;
+    border: 1px solid var(--black-color-100);
   }
 }
 

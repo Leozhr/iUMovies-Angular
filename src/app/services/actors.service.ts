@@ -12,7 +12,7 @@ export class ActorsService {
 
   Actors(id: any): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${this.API_PATH}`
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${this.API_PATH}&language=pt-BR`
     );
   }
 

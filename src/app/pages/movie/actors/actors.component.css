@@ -1,6 +1,6 @@
 .credits {
   overflow-x: hidden;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .credits .swiper-wrapper{
@@ -9,9 +9,24 @@
 }
 
 .credits .drops {
-  margin-top: 8%;
+  margin-top: 6%;
 }
 
 .actor img {
   filter: brightness(80%);
+  margin-bottom: 4%;
+}
+
+.actor span {
+  opacity: 0.6;
+}
+
+@media screen and (max-width:600px) {
+  .credits .drops {
+    margin-top: 15%;
+  }
+
+  .credits {
+    margin-top: 3%;
+  }
 }

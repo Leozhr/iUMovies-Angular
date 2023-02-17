@@ -1,11 +1,13 @@
 <header class="header bg" [ngClass]="{'visible': visibility < 50}">
   <div class="flex container logo">
-    <img src="assets/img/icons/logo.svg" alt="logo" routerLink="home">
-    <nav>
+    <img src="assets/img/icons/logo.svg" alt="logo" [routerLink]="['/home/main']" class="logo-img">
+    <img src="assets/img/icons/menu.svg" alt="logo" class="menu" (click)="modal()">
+    <nav [ngClass]="{'modal': valid == true}">
       <ul class="flex text-small">
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']">popular</a></li>
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']">top rated</a></li>
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']">upcoming</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/main']" (click)="modal()">Inicio</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']" (click)="modal()">Populares</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']" (click)="modal()">Rankeados</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']" (click)="modal()">Lançamentos</a></li>
       </ul>
     </nav>
   </div>

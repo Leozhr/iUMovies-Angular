@@ -5,6 +5,7 @@ import { SwiperModule } from 'swiper/angular';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { SafePipe } from '../global/pipes/safe.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HomeComponent, SafePipe],

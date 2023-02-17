@@ -11,6 +11,7 @@ import { PagesModule } from './pages/pages.module';
 //SERVICES
 import { MoviesService } from './services/movies.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 // Import library module
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PagesModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
   ],
   exports: [],
 })

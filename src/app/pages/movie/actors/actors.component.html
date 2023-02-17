@@ -1,19 +1,21 @@
 <section class="credits container">
 
-  <section class="actor" *ngIf="actors?.[0].profile_path">
-    <h1 class="text-high">Actors</h1>
+  <section class="actor" *ngIf="actors?.[0]?.profile_path">
+    <h1 class="text-high">Atores</h1>
     <swiper [config]="config">
       <ng-template swiperSlide class="actors" *ngFor="let actor of actors?.slice(0, 7)">
-        <img src="https://image.tmdb.org/t/p/w400{{ actor.profile_path }}" alt="" class="poster" loading="lazy">
+        <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ actor?.profile_path }}" alt="" class="poster"
+          loading="lazy">
+        <span class="text-small">{{ actor.name }}</span>
       </ng-template>
     </swiper>
   </section>
 
-  <section class="drops">
-    <h1 class="text-high">Posters</h1>
-    <swiper [slidesPerView]="1" [spaceBetween]="0">
-      <ng-template swiperSlide class=" actors" *ngFor="let poster of posters?.slice(2, 6)">
-        <img src="https://image.tmdb.org/t/p/original{{ poster.file_path }}" alt="" class="poster" loading="lazy">
+  <section class="drops" *ngIf="posters?.slice(2, 6)">
+    <h1 class="text-high">Posteres</h1>
+    <swiper [config]="banner">
+      <ng-template swiperSlide class=" actors" *ngFor="let poster of posters?.slice(0, 5)">
+        <img src="https://image.tmdb.org/t/p/original{{ poster?.file_path }}" alt="" class="poster" loading="lazy">
       </ng-template>
     </swiper>
   </section>

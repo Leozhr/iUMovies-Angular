@@ -14,12 +14,23 @@
   transition: .2s;
 }
 
+@media screen and (max-width: 1000px) {
+  .popular-main {
+    padding-top: 30%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .popular-main {
     padding-top: 20%;
   }
 
   .popular-movies {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popular-main img:hover{
+    opacity: 1;
+    border: 1px solid var(--black-color-100);
   }
 }

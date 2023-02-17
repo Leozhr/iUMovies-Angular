@@ -6,7 +6,6 @@ import { MovieRoutingModule } from './movie.routing';
 import { AveragePipe } from 'src/app/global/pipes/average.pipe';
 import { ActorsComponent } from './actors/actors.component';
 import { SwiperModule } from 'swiper/angular';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [MovieComponent, AveragePipe, ActorsComponent],
@@ -15,7 +14,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     RoundProgressModule,
     MovieRoutingModule,
     SwiperModule,
-    NgxSpinnerModule,
   ],
 })
 export class MovieModule {}
