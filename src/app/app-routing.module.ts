@@ -20,6 +20,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/top/top.module').then((m) => m.TopModule),
   },
+  {
+    path: 'home/upcoming',
+    loadChildren: () =>
+      import('./pages/upcoming/upcoming.module').then((m) => m.UpcomingModule),
+  },
 ];
 
 @NgModule({

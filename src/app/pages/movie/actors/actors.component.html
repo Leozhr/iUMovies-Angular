@@ -11,7 +11,7 @@
 
   <section class="drops">
     <h1 class="text-high">Posters</h1>
-    <swiper [slidesPerView]="1" [spaceBetween]="5">
+    <swiper [slidesPerView]="1" [spaceBetween]="0">
       <ng-template swiperSlide class=" actors" *ngFor="let poster of posters?.slice(2, 6)">
         <img src="https://image.tmdb.org/t/p/original{{ poster.file_path }}" alt="" class="poster" loading="lazy">
       </ng-template>
