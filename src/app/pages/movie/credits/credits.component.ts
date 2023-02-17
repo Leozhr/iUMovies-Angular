@@ -7,12 +7,12 @@ import SwiperCore, { Navigation, Pagination, SwiperOptions } from 'swiper';
 SwiperCore.use([Navigation, Pagination]);
 
 @Component({
-  selector: 'app-actors',
-  templateUrl: './actors.component.html',
-  styleUrls: ['./actors.component.css'],
+  selector: 'app-credits',
+  templateUrl: './credits.component.html',
+  styleUrls: ['./credits.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ActorsComponent implements OnInit {
+export class CreditsComponent implements OnInit {
   actors: cast[];
   posters: Backdrop[];
   color: string = 'black';

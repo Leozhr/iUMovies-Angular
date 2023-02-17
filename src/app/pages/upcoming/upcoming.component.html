@@ -5,8 +5,8 @@
     <div class="upcoming-movies grid">
 
       <div *ngFor="let movie of movies">
-        <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="" loading="lazy"
-          [routerLink]="['/home/movie/', movie.id]" class="poster">
+        <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="Lançamentos"
+          loading="lazy" [routerLink]="['/home/movie/', movie.id]" class="poster">
       </div>
 
     </div>

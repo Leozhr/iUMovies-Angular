@@ -1,6 +1,7 @@
 <main class="movie">
   <picture *ngIf="movie?.backdrop_path != null">
-    <img src="https://image.tmdb.org/t/p/original{{ movie?.backdrop_path }}" alt="">
+    <img src="https://image.tmdb.org/t/p/original{{ movie?.backdrop_path }}" alt="banner-principal" loading="lazy"
+      width="auto" height="auto">
   </picture>
 
   <div class="movie-info container">
@@ -24,5 +25,5 @@
 </main>
 
 <section>
-  <app-actors [id]="userId"></app-actors>
+  <app-credits [id]="userId"></app-credits>
 </section>

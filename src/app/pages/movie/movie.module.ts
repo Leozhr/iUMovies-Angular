@@ -4,11 +4,11 @@ import { MovieComponent } from './movie.component';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { MovieRoutingModule } from './movie.routing';
 import { AveragePipe } from 'src/app/global/pipes/average.pipe';
-import { ActorsComponent } from './actors/actors.component';
+import { CreditsComponent } from './credits/credits.component';
 import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
-  declarations: [MovieComponent, AveragePipe, ActorsComponent],
+  declarations: [MovieComponent, AveragePipe, CreditsComponent],
   imports: [
     CommonModule,
     RoundProgressModule,
