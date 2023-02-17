@@ -10,6 +10,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/movie/movie.module').then((m) => m.MovieModule),
   },
+  {
+    path: 'home/popular',
+    loadChildren: () =>
+      import('./pages/popular/popular.module').then((m) => m.PopularModule),
+  },
 ];
 
 @NgModule({
