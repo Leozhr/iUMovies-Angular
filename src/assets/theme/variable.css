@@ -1,8 +1,8 @@
 :root {
   /*COLOR*/
-  --background: rgb(2, 2, 2);
-  --black-color-100: #1d1d1d;
-  --gray-color-100: #181818;
+  --background: black;
+  --black-color-100: #181818;
+  --gray-color-100: #252525;
   --black-color-full: #020202;
   --white-color-100: #fdfdfd;
   --white-color-75: #fdfdfdb2;
@@ -14,7 +14,7 @@
 }
 
 .bg {
-  background-color: #1d1d1d;
+  background-color: var(--black-color-100);
 }
 
 .lato-bold {
@@ -116,6 +116,10 @@
 @media screen and (max-width: 800px){
   .text-large {
     font-size: 2.15rem;
+  }
+
+  .text-high {
+    font-size: 1.7rem;
   }
 }
 

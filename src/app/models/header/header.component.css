@@ -2,12 +2,12 @@
   background-color: var(--black-color-100);
   width: 100vw;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   transition: .4s;
 }
 
-.header img{
+.header h1{
   cursor: pointer;
 }
 
@@ -47,7 +47,7 @@
 @media screen and (max-width: 700px){
   .menu {
     display: block;
-    max-width: 50px;
+    max-width: 15%;
   }
 
   .header nav{
@@ -57,46 +57,33 @@
   .header {
     background: var(--black-color-100);
     padding: 10px 0px 10px 0px;
-    position: initial;
+    position: relative;
+    text-shadow: none;
+  }
+
+  .header .modal {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    padding-top: 60px;
+    left: 0px;
+    background-color: var(--gray-color-100);
   }
 
   .header .container {
     padding: 10px 0px 10px 0px;
   }
 
-  .logo-img {
-    max-width: 150px;
-  }
-
   .header .modal ul{
-    justify-content: center;
     gap: 15px;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    justify-content: center
-  }
-
-  .header .modal {
-    display: block;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 80px;
-    padding-top: 60px;
-    left: 0px;
-    background-color: var(--gray-color-100);
-    z-index: 10;
-  }
-
-  .header .modal ul{
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 10%;
   }
 
   .header .modal a{
-    padding: 10px 15px;
+    padding: 10px;
     background-color: var(--red-color-100);
     color: var(--white-color-100);
     border-radius: 8px;

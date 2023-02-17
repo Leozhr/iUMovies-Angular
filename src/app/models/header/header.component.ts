@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
       this.visibility = window.scrollY;
+      this.valid = false;
     });
   }
 

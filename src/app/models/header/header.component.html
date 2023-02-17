@@ -1,6 +1,6 @@
 <header class="header bg" [ngClass]="{'visible': visibility < 50}">
   <div class="flex container logo">
-    <img src="assets/img/icons/logo.svg" alt="logo" [routerLink]="['/home/main']" class="logo-img">
+    <h1 [routerLink]="['/home/main']" class="text-high"><span style="color: var(--red-color-100);">IU</span>MOVIES</h1>
     <img src="assets/img/icons/menu.svg" alt="logo" class="menu" (click)="modal()">
     <nav [ngClass]="{'modal': valid == true}">
       <ul class="flex text-small">
