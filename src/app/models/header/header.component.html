@@ -1,10 +1,8 @@
 <header class="header bg" [ngClass]="{'visible': visibility < 50}">
   <div class="flex container logo">
     <h1 [routerLink]="['/home/main']" class="text-high"><span style="color: var(--red-color-100);">IU</span>MOVIES</h1>
-    <img src="assets/img/icons/menu.svg" alt="logo" class="menu" (click)="modal()">
     <nav [ngClass]="{'modal': valid == true}">
-      <ul class="flex text-small">
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/main']" (click)="modal()">Inicio</a></li>
+      <ul class="flex text-medium">
         <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']" (click)="modal()">Populares</a></li>
         <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']" (click)="modal()">Rankeados</a></li>
         <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']" (click)="modal()">Lançamentos</a></li>

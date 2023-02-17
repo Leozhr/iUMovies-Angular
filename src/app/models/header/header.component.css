@@ -33,25 +33,23 @@
   text-shadow: 1px 1px 1px black;
 }
 
-.menu {
-  display: none;
-}
-
-@media screen and (max-width: 1000px) and (min-width: 701px){
+@media screen and (max-width: 1000px){
   .logo {
-    flex-direction: column;
     gap: 50px;
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 700px){
-  .menu {
-    display: block;
-    max-width: 15%;
+  .logo {
+    gap: 30px;
   }
 
-  .header nav{
-    display: none;
+  .header ul {
+    gap: 5px;
+    text-shadow: none;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .header {
@@ -61,35 +59,20 @@
     text-shadow: none;
   }
 
-  .header .modal {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    padding-top: 60px;
-    left: 0px;
-    background-color: var(--gray-color-100);
-  }
-
-  .header .container {
-    padding: 10px 0px 10px 0px;
-  }
-
-  .header .modal ul{
-    gap: 15px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-bottom: 10%;
-  }
-
-  .header .modal a{
-    padding: 10px;
-    background-color: var(--red-color-100);
+  .header a {
+    padding: 14px 7px;
+    background: var(--red-color-100);
     color: var(--white-color-100);
-    border-radius: 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
   }
+}
 
-  .header .modal li{
-    margin-bottom: 18px;
+@media screen and (max-width: 357px){
+  .header ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
   }
 }

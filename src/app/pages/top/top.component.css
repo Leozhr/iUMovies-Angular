@@ -16,22 +16,25 @@
 
 @media screen and (max-width: 1000px) {
   .top-main {
-    padding-top: 25%;
+    padding-top: 30%;
+  }
+
+  .top-movies {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (max-width: 600px) {
   .top-main {
-    padding-top: 30%;
+    padding-top: 20%;
   }
 
   .top-movies {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .top-movies img:hover{
+  .top-main img:hover{
     opacity: 1;
     border: 1px solid var(--black-color-100);
   }
 }
-

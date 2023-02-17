@@ -18,6 +18,10 @@
   .upcoming-main {
     padding-top: 30%;
   }
+
+  .upcoming-movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media screen and (max-width: 600px) {
