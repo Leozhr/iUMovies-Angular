@@ -19,7 +19,7 @@ export class CreditsComponent implements OnInit {
 
   pixel = new resolution();
 
-  config: SwiperOptions = {
+  actor: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 10,
     breakpoints: {
@@ -39,6 +39,10 @@ export class CreditsComponent implements OnInit {
   constructor(private credits: ActorsService) {}
 
   ngOnInit(): void {
+    window.addEventListener('beforeunload', function () {
+      window.location.replace('');
+    });
+
     this.credits.Actors(this.id).subscribe({
       next: (result) => {
         this.actors = result.cast;
@@ -52,5 +56,9 @@ export class CreditsComponent implements OnInit {
       },
       error: () => {},
     });
+  }
+
+  test() {
+    window.location.reload();
   }
 }

@@ -1,5 +1,5 @@
 <main class="home">
-  <swiper [slidesPerView]="1" [spaceBetween]="0">
+  <swiper [slidesPerView]="1" [spaceBetween]="0" [pagination]="{ clickable: true }">
     <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 3)">
       <img src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path }}" alt="" loading="lazy" width="auto"
         height="auto" [routerLink]="['/home/movie/', movie.id]">
@@ -18,7 +18,7 @@
   <div class="container flex-cln post">
     <h1 class="text-high">Lançamentos</h1>
     <div>
-      <swiper [config]="config">
+      <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of upcoming?.slice(0, 7)">
           <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="" class="poster"
             loading="lazy" [routerLink]="['/home/movie/', movie.id]" width="auto" height="auto">
@@ -30,7 +30,7 @@
   <div class="container flex-cln post">
     <h1 class="text-high">Populares</h1>
     <div>
-      <swiper [config]="config">
+      <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 12)">
           <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="" class="poster"
             loading="lazy" [routerLink]="['/home/movie/', movie.id]" width="auto" height="auto">
@@ -42,7 +42,7 @@
   <div class="container flex-cln post">
     <h1 class="text-high">Rankeados</h1>
     <div>
-      <swiper [config]="config">
+      <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of top?.slice(0, 12)">
           <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ movie.poster_path }}" alt="" class="poster"
             loading="lazy" [routerLink]="['/home/movie/', movie.id]" width="auto" height="auto">

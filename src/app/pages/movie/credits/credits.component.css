@@ -21,12 +21,36 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width:600px) {
+.actors {
+  margin-bottom: 20%;
+}
+
+.actor-post {
+  margin-top: 6%;
+  gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.drops-post {
+  margin-top: 6%;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 900px) {
+  .actor-post {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .credits .drops {
     margin-top: 12%;
   }
 
   .credits {
     margin-top: 3%;
+  }
+
+  .drops-post {
+    grid-template-columns: 1fr;
   }
 }

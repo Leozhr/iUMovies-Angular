@@ -2,8 +2,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { average } from 'src/app/global/functions/average';
 import { resolution } from 'src/app/global/functions/resolution';
+import { cast } from 'src/app/interfaces/actor';
 import { Film } from 'src/app/interfaces/poster';
 import { MoviesService } from 'src/app/services/movies.service';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+SwiperCore.use([Navigation, Pagination]);
 
 @Component({
   selector: 'app-movie',
@@ -16,7 +19,7 @@ export class MovieComponent implements OnInit {
   movie: Film;
   round = new average();
   pixel = new resolution();
-  color: string = 'black';
+  actors: cast[];
 
   constructor(private url: ActivatedRoute, private api: MoviesService) {}
 
@@ -30,13 +33,8 @@ export class MovieComponent implements OnInit {
     this.api.movieID(this.userId).subscribe({
       next: (result) => {
         this.movie = result;
-        this.getColor();
       },
       error: () => {},
     });
-  }
-
-  getColor() {
-    this.color = this.round.circle(this.movie.vote_average);
   }
 }

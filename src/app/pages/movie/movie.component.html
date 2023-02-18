@@ -7,9 +7,9 @@
   <div class="movie-info container">
 
     <div class="average">
-      <round-progress [current]="movie?.vote_average" [max]="10" [color]="color" [background]="'#2b2b2b'" [radius]="125"
-        [stroke]="20" [semicircle]="false" [rounded]="true" [clockwise]="true" [responsive]="false" [duration]="800"
-        [animation]="'easeInOutQuart'" [animationDelay]="500"></round-progress>
+      <round-progress [current]="movie?.vote_average" [max]="10" [color]="round?.circle(movie?.vote_average)"
+        [background]="'#2b2b2b'" [radius]="125" [stroke]="20" [semicircle]="false" [rounded]="true" [clockwise]="true"
+        [responsive]="false" [duration]="800" [animation]="'easeInOutQuart'" [animationDelay]="500"></round-progress>
       <span>{{ movie?.vote_average | average }}</span>
     </div>
 

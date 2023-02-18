@@ -1,0 +1,27 @@
+.swiper-button-next, .swiper-button-prev {
+  color: var(--white-color-100);
+  top: 0px;
+  width: 60px;
+  height: 100%;
+  margin-top: 0px;
+  background: linear-gradient(to left,rgba(0, 0, 0, 0.7), transparent);
+  right: 0px;
+}
+
+.swiper-button-prev {
+  background: linear-gradient(to right,rgba(0, 0, 0, 0.7), transparent);
+  left: 0px;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--red-color-100);
+  width: 15%;
+  height: 12px;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
+}

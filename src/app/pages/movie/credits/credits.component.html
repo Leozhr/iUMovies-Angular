@@ -2,23 +2,22 @@
 
   <section class="actor" *ngIf="actors?.[0]?.profile_path">
     <h1 class="text-high">Atores</h1>
-    <swiper [config]="config">
-      <ng-template swiperSlide class="actors" *ngFor="let actor of actors?.slice(0, 7)">
+    <div class="grid actor-post">
+      <div class="actors" *ngFor="let actor of actors?.slice(0, 6)">
         <img src="https://image.tmdb.org/t/p/{{ pixel.poster() }}{{ actor?.profile_path }}" alt="atores" class="poster"
           loading="lazy" *ngIf="actor?.profile_path" width="auto" height="auto">
         <span class="text-small" *ngIf="actor?.profile_path">{{ actor.name }}</span>
-      </ng-template>
-    </swiper>
+      </div>
+    </div>
   </section>
 
   <section class="drops" *ngIf="posters?.slice(2, 6)">
     <h1 class="text-high">Posteres</h1>
-    <swiper [config]="banner">
-      <ng-template swiperSlide class=" actors" *ngFor="let poster of posters?.slice(0, 5)">
+    <div class="grid drops-post">
+      <div *ngFor="let poster of posters?.slice(0, 4)">
         <img src="https://image.tmdb.org/t/p/original{{ poster?.file_path }}" alt="banners" class="poster"
           loading="lazy" *ngIf="poster?.file_path" width="auto" height="auto">
-      </ng-template>
-    </swiper>
+      </div>
+    </div>
   </section>
-
 </section>
