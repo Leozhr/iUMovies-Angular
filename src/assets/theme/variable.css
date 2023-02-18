@@ -1,14 +1,14 @@
 :root {
   /*COLOR*/
   --background: black;
-  --black-color-100: #181818;
+  --black-color-100: #0f0f0f;
   --gray-color-100: #252525;
   --black-color-full: #020202;
   --white-color-100: #fdfdfd;
   --white-color-75: #fdfdfdb2;
   --white-color-50: #fdfdfd7c;
   --red-color-100: #F3353E;
-  --red-color-hover: #aa383e;
+  --red-color-hover: #86161c;
   --red-color-dark: #991c23;
   /*FONTS*/
   --fonts: 'Lato', sans-serif;
@@ -81,10 +81,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--white-color-100);
+  background-color: var(--white-color-75);
 }
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--red-color-100);

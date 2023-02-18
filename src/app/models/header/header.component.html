@@ -1,11 +1,11 @@
 <header class="header bg" [ngClass]="{'visible': visibility < 50}">
   <div class="flex container logo">
     <h1 [routerLink]="['/home/main']" class="text-high"><span style="color: var(--red-color-100);">IU</span>MOVIES</h1>
-    <nav [ngClass]="{'modal': valid == true}">
+    <nav>
       <ul class="flex text-medium">
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']" (click)="modal()">Populares</a></li>
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']" (click)="modal()">Rankeados</a></li>
-        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']" (click)="modal()">Lançamentos</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/popular']">Populares</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/top']">Rankeados</a></li>
+        <li><a [routerLinkActive]="'active'" [routerLink]="['/home/upcoming']">Lançamentos</a></li>
       </ul>
     </nav>
   </div>

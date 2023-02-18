@@ -16,7 +16,7 @@
 <div class="home-posters">
 
   <div class="container flex-cln post">
-    <h1 class="text-high">Lançamentos</h1>
+    <h1 class="text-medium">Lançamentos</h1>
     <div>
       <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of upcoming?.slice(0, 7)">
@@ -28,7 +28,7 @@
   </div>
 
   <div class="container flex-cln post">
-    <h1 class="text-high">Populares</h1>
+    <h1 class="text-medium">Populares</h1>
     <div>
       <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of popular?.slice(0, 12)">
@@ -40,7 +40,7 @@
   </div>
 
   <div class="container flex-cln post">
-    <h1 class="text-high">Rankeados</h1>
+    <h1 class="text-medium">Rankeados</h1>
     <div>
       <swiper [config]="config" [navigation]="true">
         <ng-template swiperSlide class="banner" *ngFor="let movie of top?.slice(0, 12)">

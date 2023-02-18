@@ -7,18 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   visibility: number = 0;
-  valid: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
       this.visibility = window.scrollY;
-      this.valid = false;
     });
-  }
-
-  modal() {
-    this.valid = !this.valid;
   }
 }
