@@ -58,7 +58,7 @@
   }
 
   .header {
-    background-color: #000F26;
+    background-color: var(--black-color-100);
     padding: 10px 0px 10px 0px;
     position: relative;
     text-shadow: none;

@@ -15,7 +15,7 @@
 }
 
 .bg {
-  background-color: #000F26;
+  background-color: var(--black-color-100);
 }
 
 .lato-bold {
